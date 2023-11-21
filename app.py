@@ -4,10 +4,10 @@ import pandas as pd
 from PIL import Image
 
 # CONFIGURAÇÃO DO APP
-st.set_page_config(layout= "wide", page_icon = ":bar_chart:", page_title = "Portfólio - Ciência de Dados")
+st.set_page_config(layout = "wide", page_icon = ":bar_chart:", page_title = "Portfólio - Ciência de Dados", menu_items=None)
 
-css = "estilo.css"
 # ESTILO CSS
+css = "estilo.css"
 with open(css, encoding = "utf8") as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html = True)
 
@@ -65,17 +65,16 @@ with container():
     # PROJETO AMAZON
     with tab1:
         
-        
-        st.image("imagem/logo-amazon.png", width = 280)
-        st.image("imagem/exemplo-dash.jpg")
+        st.image("imagem/logo-amazon.png", width = 250)
+        st.image("imagem/exemplo-dash.jpg", width = 900)
         st.divider()
-        col1, col2, col3 = st.columns(3)
+        col1, col2, col3 = st.columns([2,2,4])
         col1.link_button("Github", "https://github.com/erikssfd/AmzonDashboard", type = "primary")
         col2.link_button("Medium", "https://github.com/erikssfd/AmzonDashboard", type = "primary")
         
         with col3.expander("Ferramentas Utilizadas"):
-            subcol1, subcol2, subcol3 = st.columns([2,2,2])
+            subcol1, subcol2, subcol3 = st.columns([1,1,1])
             
-            subcol1.image("imagem/python-logo.png", width = 40)
-            subcol2.image("imagem/powerbi-logo.png", width = 40)
-            subcol3.image("imagem/tableau-logo.png", width = 60)
+            subcol1.image("imagem/python-logo.png", width = 65, caption = "Python")
+            subcol2.image("imagem/powerbi-logo.png", width = 65, caption = "PowerBI")
+            subcol3.image("imagem/tableau-logo.png", width = 120, caption = "Tableau")
