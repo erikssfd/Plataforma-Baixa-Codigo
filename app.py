@@ -56,25 +56,42 @@ with lateral:
     st.caption(":orange[O senhor é meu pastor e nada me faltará!]")
     
 # PÁGINA INCIAL
-
 with container():
+    # TÍTULO PÁGINA OFICIAL
     st.write("### Projetos")
     
+    # CRIAÇÃO DAS ABAS DOS PROJETOS (LOGO) & (TITULO DO PROJETO)
     tab1, tab2, tab3 = st.tabs([":computer: Amazon", ":computer: Coursera", ":computer: Udemy"])
     
-    # PROJETO AMAZON
+# PROJETO AMAZON
+
+    # ESTILIZAÇÃO DA COLUNA 1
     with tab1:
         
+        # IMAGENS (LOGO) & (DASHBOARD)
         st.image("imagem/logo-amazon.png", width = 250)
         st.image("imagem/exemplo-dash.jpg", width = 900)
+        
+        # DIVISOR
         st.divider()
+        
+        # CRIAÇÃO DAS COLUNAS 1 2 3
         col1, col2, col3 = st.columns([2,2,4])
+        
+        # COLUNA 1
         col1.link_button("Github", "https://github.com/erikssfd/AmzonDashboard", type = "primary")
+        
+            # COLUNA 2
         col2.link_button("Medium", "https://github.com/erikssfd/AmzonDashboard", type = "primary")
         
+                # COLUNA 3
         with col3.expander("Ferramentas Utilizadas"):
+            
+            
+            # CRIAÇÃO DE SUB-COLUNAS
             subcol1, subcol2, subcol3 = st.columns([1,1,1])
             
+            # IMAGENS DAS FERRAMENTAS UTILIZADAS (CAMINHO ARQUIVO, TAMANHO, DESCRIÇÃO)
             subcol1.image("imagem/python-logo.png", width = 65, caption = "Python")
             subcol2.image("imagem/powerbi-logo.png", width = 65, caption = "PowerBI")
             subcol3.image("imagem/tableau-logo.png", width = 120, caption = "Tableau")
